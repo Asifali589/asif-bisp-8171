@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>آصف علی مدنی BISP 8171</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#eff6f2;color:#183d32;font-family:Arial,sans-serif;line-height:2}
+header{background:#007b50;color:white;padding:28px 18px;border-radius:0 0 30px 30px;text-align:center}
+header h1{font-size:27px;margin:0}
+header p{margin:5px 0}
+main{max-width:650px;margin:22px auto;padding:0 15px}
+.card{background:white;padding:22px;margin-bottom:20px;border-radius:22px;border:1px solid #dce8e1;box-shadow:0 4px 12px #0000000b}
+h2{color:#008052;font-size:22px;margin-top:0}
+p{font-size:17px}
+input{width:100%;padding:16px;border:1px solid #cbd8d1;border-radius:12px;font-size:18px;margin:10px 0}
+button,.link{display:block;width:100%;background:#008052;color:white;text-align:center;text-decoration:none;border:0;border-radius:12px;padding:14px;font-size:18px;font-weight:bold;margin:10px 0;cursor:pointer}
+.secondary{background:#e7f5ed;color:#007b50}
+.note{font-size:14px;color:#66766e}
+footer{text-align:center;padding:20px;color:#65766d}
+</style>
+</head>
+<body>
+<header>
+<h1>آصف علی مدنی</h1>
+<h2 style="color:white">BISP 8171 رہنمائی و چیکنگ سروس</h2>
+<p>ذاتی استعمال کے لیے مفت رہنمائی ایپ</p>
+</header>
+<main>
+<section class="card">
+<h2>① BISP قسط / اہلیت چیک کریں</h2>
+<p>اپنا 13 ہندسوں کا شناختی کارڈ نمبر درج کریں۔ پھر سرکاری 8171 پورٹل پر جا کر نتیجہ معلوم کریں۔</p>
+<input id="cnic" type="text" inputmode="numeric" maxlength="13" placeholder="شناختی کارڈ نمبر 13 ہندسوں کا">
+<button onclick="openBisp()">سرکاری 8171 پورٹل کھولیں</button>
+<p class="note">آپ کا شناختی کارڈ نمبر اس ایپ میں محفوظ یا کسی کو ارسال نہیں کیا جاتا۔ سرکاری پورٹل پر خود درج کریں۔</p>
+</section>
+
+<section class="card">
+<h2>② بچوں کے تعلیمی وظائف</h2>
+<p>Benazir Taleemi Wazaif کی رجسٹریشن، حاضری اور ادائیگی کی تصدیق کے لیے BISP تحصیل دفتر سے رابطہ کریں۔</p>
+<a class="link" href="https://www.bisp.gov.pk/" target="_blank">BISP سرکاری ویب سائٹ کھولیں</a>
+<p>ضروری معلومات:</p>
+<ul>
+<li>والدہ یا سرپرست کا اصل شناختی کارڈ</li>
+<li>بچے کا ب فارم</li>
+<li>اسکول کا داخلہ اور حاضری ریکارڈ</li>
+<li>وظائف کی قسط کی تصدیق</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>③ اہم سرکاری رابطہ</h2>
+<p>BISP ہیلپ لائن</p>
+<a class="link" href="tel:080026477">0800-26477 پر کال کریں</a>
+<p>8171 پر آنے والے سرکاری پیغامات ہی پر اعتماد کریں۔</p>
+</section>
+
+<section class="card">
+<h2>④ اہم ہدایات</h2>
+<p>کسی ایجنٹ کو فیس نہ دیں۔ اپنا PIN، OTP یا شناختی معلومات غیر متعلقہ افراد کو نہ بتائیں۔</p>
+<button class="secondary" onclick="window.scrollTo({top:0,behavior:'smooth'})">واپس اوپر جائیں</button>
+</section>
+</main>
+<footer>© آصف علی مدنی | BISP 8171 رہنمائی</footer>
+<script>
+function openBisp(){
+ let n=document.getElementById('cnic').value.replace(/\D/g,'');
+ if(n.length!==13){
+ alert('براہ کرم 13 ہندسوں کا شناختی کارڈ نمبر درج کریں');
+ return;
+ }
+ window.open('https://8171.bisp.gov.pk/','_blank');
+}
+</script>
+</body>
+</html>
